@@ -1,0 +1,25 @@
+{% extends 'layout/base.html' %}
+
+{% block 'title' %} Crear Contacto {% endblock %}
+
+{% block 'content' %}
+
+<div class='center'>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{message.tags}}"{% endif %}>{{message}}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <span><a href="{% url 'contact' %}">Volver atras</a></span>
+    <form action="{% url 'contact_create' %}" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value='Enviar'>
+    </form>
+
+</div>
+
+
+{% endblock %}
