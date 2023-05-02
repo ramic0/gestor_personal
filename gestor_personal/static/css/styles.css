@@ -33,6 +33,7 @@ nav ul li a {
     border-radius: 10px;
     width: 50%;
     list-style-type:none;
+    margin: 80px;
 }
 
 .list li {
@@ -54,7 +55,7 @@ nav ul li a {
     align-items: center;
     color: white;
     margin: 20px;
-    background-color: aqua;
+    background-color: blue;
 }
 
 .card a {
@@ -64,4 +65,8 @@ nav ul li a {
 
 .card:hover {
     background-color: black;
+}
+
+.center {
+    text-align: center;
 }
